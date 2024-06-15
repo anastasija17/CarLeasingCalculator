@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="card">
+        <div class="row row-centered">
+            <h2>Car Leasing Calculator</h2>
+        </div>
+        <div class="row row-centered">
+            <div class="col">
+                <div class="row">
+                    <label for="carType">Car Type:</label>
+                </div>
+                <div class="row">
+                    <select class="input select-input" name="carType" id="carType">
+                        <option value="2.99">Used</option>
+                        <option value="3.7">Brand New</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="value">Car Value(€10,000 - €200,000):</label>
+                </div>
+                <div class="row">
+                    <input class="input" type="number" inputmode="numeric" id="value" name="value" min="10000" max="200000">
+                </div>
+                <div class="row">
+                    <input type="range" min="10000" max="200000" value="25000" class="slider" id="valueRange">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label for="leasePeriod">Lease Period (months):</label>
+                </div>
+                <div class="row">
+                    <select class="input select-input" name="leasePeriod" id="leasePeriod">
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                        <option value="60">60</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="payment">Down Payment(10% - 50%):</label>
+                </div>
+                <div class="row">
+                    <input class="input" type="number" inputmode="numeric" id="payment" name="payment" min="10" max="50" step="5">
+                </div>
+                <div class="row">
+                    <input type="range" min="10" max="50" value="15" class="slider" step="5" id="paymentRange">
+                </div>
+            </div>
+        </div>
+        <div class="row row-centered">
+            <h2>Leasing Details</h2>
+        </div>
+        <hr>
+        <div class="row row-centered">
+            <div class="col">
+                <div class="row">
+                    Total Leasing Cost:<span id="totalLeasingCost"></span>
+                </div>
+                <div class="row">
+                    Down Payment:<span id="downPayment"></span>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="col">
+                <div class="row">
+                    Monthly Installment:<span id="monthlyInstallment"></span>
+                </div>
+                <div class="row">
+                    InterestRate:<span id="interestRate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
